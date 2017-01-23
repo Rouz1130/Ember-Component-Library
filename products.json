@@ -1,0 +1,18 @@
+
+{ "products": [{
+    "name": "some-product",
+    "pirce": "12.00",
+    "barcode": "0075678164125",
+    "image": "http://www.mobilevillage.com/wp-content/uploads/2013/03/Android-evil-small.jpg"
+  }, {
+    "name": "some-product",
+    "pirce": "13.00",
+    "barcode": "0075678164125",
+    "image": "http://carstenknoch.com/wp-content/uploads/2012/12/iTunes10-icon-small.png"
+  }, {
+    "name": "some-product",
+    "pirce": "20.00",
+    "barcode": "0075678164125",
+    "image": "http://www.mutis.co.uk/wp-content/uploads/2013/10/Citi-Logo-Blue-small.jpg"
+  }]
+}
