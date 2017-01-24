@@ -1,15 +1,19 @@
-<div class=container>
-  <h1>Test</h1>
-</div>
 
-<ul>
-  <li><strong>Length of Mirage Generated List:</strong> {{model.product.data.length}}</li>
-  <li><strong>Working on Looping</strong></li>
-  <ul>
-    {{#each model as products}}
-      <li>{{model.product.data.attributes.contact}}</li>
-    {{/each}}
-  </ul>
-  <li><strong>Name of Second Entry from Mirage List:</strong> {{model.product2.data.attributes.name}}</li>
-  <li><strong>Name of Second Contact Using Faker:</strong> {{model.product2.data.attributes.contact}}</li>
-</ul>
+<div class=container>
+  <h1>Product Test Page</h1>
+  <br>
+    <h2><b>Products:</b></h2>
+      <hr>
+    <ul>
+      <br>
+      {{#each model.products.data as |product| }}
+      <!-- var randomName = faker.name.findName() -->
+      <li><b>Name:</b> {{product.attributes.name}}</li>
+      <li><b>Image:</b>{{product.attributes.image}}</li>
+      <li><b>Barcode</b>{{product.attributes.barcode}}</li>
+      <li><b>Price:</b> {{product.attributes.price}}</li>
+      <br>
+      {{/each}}
+    </ul>
+</div>
+{{outlet}}
