@@ -1,11 +1,4 @@
-<!-- <div class=container>
-  <h1>Test</h1>
-</div>
-
-<ul>
-  <li>{{model.product.data.length}}</li>
-</ul> -->
-
+<!-- 
 <div class=container>
   <h1>Test</h1>
 </div>
@@ -13,4 +6,21 @@
 <ul>
   <li><strong>Length of Mirage Generated List:</strong> {{model.product.data.length}}</li>
   <li><strong>Name of Second Entry from Mirage List:</strong> {{model.product2.data.attributes.name}}</li>
-</ul>
+</ul> -->
+
+
+<div class=container>
+  <h1>Test</h1>
+</div>
+
+<ul>
+  <li><strong>Length of Mirage Generated List:</strong> {{model.product.data.length}}</li>
+  <li><strong>Working on Looping</strong></li>
+  <ul>
+    <li>I bet it's not working yet</li>
+    {{#each model as product}}
+      <li>{{model.product.data.attributes.name}}</li>
+    {{/each}}
+  </ul>
+  <li><strong>Name of Second Entry from Mirage List:</strong> {{model.product2.data.attributes.name}}</li>
+  <li><strong>Name of Second Contact Using Faker:</strong> {{model.product2.data.attributes.barcode}}<
