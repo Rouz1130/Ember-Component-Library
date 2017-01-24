@@ -6,6 +6,8 @@ export default DS.Model.extend({
   detailsImageId: DS.attr(),
   itemType: DS.attr(),
   name: DS.attr('string'),
+  contact: DS.attr('string'),
+  email:DS.attr('string'),
   price: DS.attr('number'),
   productImage: DS.attr('string'),
   productImageId: DS.attr(),
