@@ -1,0 +1,18 @@
+##INSTALLS:
+ember install ember-cli-sass
+-Make sure to change app.css to app.scss
+bower install bootstrap --save = add on if you dont use the @import in styles/app.scss.
+
+Application.hbs file:{{nav-bar}}
+                      {{outlet}}
+ember generate component nav-bar
+
+ember generate component side-bar
+
+ember install ember-font-awesome
+e.g: <span>{{fa-icon "star" size="lg"}}</span>
+
+
+##MIRAGE:
+https://github.com/marak/Faker.js/
+List of all attribute names for faker.

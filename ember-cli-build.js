@@ -7,6 +7,15 @@ module.exports = function(defaults) {
     // Add options here
   });
 
+// any script tags can be added here...e.g google fonts
+  app.import(app.bowerDirectory + '/bootstrap/dist/css/bootstrap.css');
+  app.import(app.bowerDirectory + '/bootstrap/dist/js/bootstrap.js');
+  app.import(app.bowerDirectory + '/bootstrap/dist/fonts/glyphicons-halflings-regular.woff', {
+    destDir: 'fonts'
+
+
+  });
+
   // Use `app.import` to add additional libraries to the generated
   // output files.
   //

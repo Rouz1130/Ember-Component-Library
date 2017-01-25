@@ -1,18 +1,21 @@
-  <div class="container">
-  <br>
-    <h2><b>Products:</b></h2>
-      <hr>
-    <ul>
-      <br>
-      {{#each model.products.data as |product| }}
-      <!-- var randomName = faker.name.findName() -->
-      <li><b>Name:</b> {{product.attributes.name}}</li>
-      <li><b>Image:</b>{{product.attributes.image}}</li>
-      <li><b>Barcode:</b>{{product.attributes.barcode}}</li>
-      <li><b>Price:</b> {{product.attributes.price}}</li>
-      <br>
-      {{/each}}
-    </ul>
+    <div class="container-fluid">
+      <div class="row">
+        <div class="col-sm-3 col-md-2 sidebar">
+           {{side-bar}}
+        </div>
+        <!-- <div class="jumbotron"> -->
+          <div class="container">
+          <div class="col-sm-9 col-sm-offset-3 col-md-10 col-md-offset-2 main">
+              {{#each model.products.data as |product| }}
+              <!-- var randomName = faker.name.findName() -->
+              <!--faker atttribute names https://github.com/marak/Faker.js/  -->
+              <li><b>Name:</b> {{product.attributes.name}}</li>
+              <li><b>Image:</b>{{product.attributes.image}}</li>
+              <li><b>Barcode:</b>{{product.attributes.barcode}}</li>
+              <li><b>Price:</b> {{product.attributes.price}}</li>
+              <br>
+              {{/each}}
+          </div>
+        </div>
+      </div>
   </div>
-
-{{outlet}}
