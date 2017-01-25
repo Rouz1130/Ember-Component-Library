@@ -6,18 +6,32 @@
         <!-- <div class="jumbotron"> -->
           <div class="container">
           <div class="col-sm-9 col-sm-offset-3 col-md-10 col-md-offset-2 main">
-              {{#each model.products.data as |product| }}
-              <!-- var randomName = faker.name.findName() -->
-              <!--faker atttribute names https://github.com/marak/Faker.js/  -->
+              <ul>
+                {{#each model.products.data as |product| }}
+                {{#link-to 'product'}}<li>{{product.attributes.name}}</li>{{/link-to}}
+                {{/each}}
+              </ul>
 
 
-              <li><b>Name:</b> {{product.attributes.name}}</li>
+              <!-- <li><b>Name:</b> {{product.attributes.name}}</li>
               <li><b>Image:</b>{{product.attributes.image}}</li>
               <li><b>Barcode:</b>{{product.attributes.barcode}}</li>
               <li><b>Price:</b> {{product.attributes.price}}</li>
               <br>
-              {{/each}}
+              {{/each}} -->
           </div>
         </div>
       </div>
   </div>
+
+
+
+    <!-- <h1>Accounts</h1>
+    <ul>
+      <li><strong>Accounts</strong></li>
+      <ul>
+        {{#each model.accounts.data as |account| }}
+        {{#link-to 'product'}}<li>{{product.attributes.name}}</li>{{/link-to}}
+        {{/each}}
+      </ul>
+    </ul> -->

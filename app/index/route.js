@@ -8,5 +8,5 @@ export default Ember.Route.extend({
     return RSVP.hash({
       products: $.getJSON('/api/products')
     });
-      }
+  }
 });
