@@ -16,3 +16,44 @@ e.g: <span>{{fa-icon "star" size="lg"}}</span>
 ##MIRAGE:
 https://github.com/marak/Faker.js/
 List of all attribute names for faker.
+
+{{#each model.products.data as |product| }}
+
+
+product folder
+template:
+<div class="container-fluid">
+  <div class="row">
+    <div class="col-sm-3 col-md-2 sidebar">
+      {{side-bar}}
+    </div>
+    <!--side-nav ends  -->
+      <div class="container">
+    <div class="col-sm-9 col-sm-offset-3 col-md-10 col-md-offset-3 main">
+      <ul>
+          {{#each model.products.data as |product|}}
+          {{product-card click=(action 'selectSearchResult' product) product=product}}
+          <!-- <li><b>Name:</b> {{product.attributes.name}}</li>
+          <li><b>Image:</b>{{product.attributes.image}}</li>
+          <li><b>Barcode:</b>{{product.attributes.barcode}}</li>
+          <li><b>Price:</b> {{product.attributes.price}}</li> -->
+          <br>
+          {{/each}}
+      </ul>
+    </div>
+  </div>
+ </div>
+</div>
+
+
+routes
+import Ember from 'ember';
+
+const { RSVP, $ } = Ember;
+export default Ember.Route.extend({
+  model() {
+    return RSVP.hash({
+      products: $.getJSON('/api/products')
+    });
+    }
+});

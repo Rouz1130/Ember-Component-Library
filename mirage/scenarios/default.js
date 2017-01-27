@@ -1,5 +1,5 @@
 export default function(server) {
-  server.createList('product', 8);
+  server.createList('product', 1);
 }
 
   /*

@@ -18,7 +18,7 @@ module.exports = function(environment) {
     },
 
 
-    firebas: {
+    firebase: {
     apiKey: "AIzaSyDCy0Lb1l6_JzI3hJUxkFq5mJhmAklYJsc",
     authDomain: "component-library-f52ea.firebaseapp.com",
     databaseURL: "https://component-library-f52ea.firebaseio.com",
