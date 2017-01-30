@@ -7,9 +7,9 @@
     {{/if}}
 </div>
 <div class="product-card__product-info-container">
-    {{product.name}}<br />
-    Price: {{product.price}}<br />
+    <b>Name:</b> {{product.name}}<br>
+    <b>Price:</b> ${{product.price}}<br>
     {{#if product.barcode}}
-        UPC: {{product.barcode}}
+    <b>UPC:</b> {{product.barcode}}
     {{/if}}
 </div>

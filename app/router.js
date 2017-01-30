@@ -9,7 +9,7 @@ const Router = Ember.Router.extend({
 Router.map(function() {
   this.route("/");
   this.route('product-card-doc');
-  this.route('test');
+
 });
 
 export default Router;
