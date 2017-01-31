@@ -49,6 +49,24 @@ $no-image-font-size: $image-width;
     float: right;
 }
 
+.cp-Panel {
+  border: 1px solid #ddd;
+}
+.cp-Panel-toggle {
+  display: block;
+  padding: 1em;
+}
+.cp-Panel-toggle:link {
+  text-decoration: none;
+}
+.cp-Panel-toggle:hover {
+  background-color: whitesmoke;
+}
+.cp-Panel-body-inner {
+  padding: 1em;
+}
+
+
 .product-card__image-container > img {
     margin: auto;
     display: block;
@@ -79,10 +97,16 @@ $no-image-font-size: $image-width;
 
 }
 
-.card .card-image {
-  position: relative;
-  overflow: hidden;
-}
+
+// .card .card-image {
+//   position: relative;
+//   overflow: hidden;
+// }
+//
+//
+//
+//
+//
 // one we add an image this code bleow
 // .card .card-image img {
 //   border-radius: 2px 2px 0 0;

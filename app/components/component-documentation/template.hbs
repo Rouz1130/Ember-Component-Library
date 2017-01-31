@@ -1,17 +1,85 @@
-<div class="container">
+<!-- <div class="container">
     <div class="row">
-        <!-- Card Projects -->
-        <div class="col-md-6 col-md-offset-3">
+
+         <div class="col-md-6 col-md-offset-3">
             <div class="card">
               <span class="card-title"><h2>Description</h2></span>
               <hr>
               <div class="card-content">
-                {{yield}}
+                  {{yield}}
             </div>
         </div>
     </div>
 </div>
+</div> -->
+
+<div class="container">
+<div class="container-fluid">
+  <div class="row">
+    <div class="col-md-6 col-md-offset-3">
+      <div id="faq" role="tablist" aria-multiselectable="true">
+
+        <div class="card">
+          <div class="card-content" role="tab" id="questionOne">
+            <h5 class="card-title">
+              <a data-toggle="collapse" data-parent="#faq" href="#answerOne" aria-expanded="false" aria-controls="answerOne">
+                <h3>Controller Actions:</h3>
+              </a>
+            </h5>
+          </div>
+          <div id="answerOne" class="collapse" role="tabcard" aria-labelledby="questionOne">
+            <div class="card-block">
+              <p>Descriptions and specs on Controller Actions</p>
+            </div>
+          </div>
+
+          <div class="card-content" role="tab" id="questionTwo">
+            <h5 class="card-title">
+              <a class="collapsed" data-toggle="collapse" data-parent="#faq" href="#answerTwo" aria-expanded="false" aria-controls="answerTwo">
+                <h3>Controller Fields:</h3>
+              </a>
+            </h5>
+          </div>
+          <div id="answerTwo" class="collapse" role="tabcard" aria-labelledby="questionTwo">
+            <div class="card-block">
+              <p>Descriptions and specs on Controller Fileds</p>
+            </div>
+          </div>
+
+            <div class="card-content" role="tab" id="questionThree">
+              <h5 class="card-title">
+                <a class="collapsed" data-toggle="collapse" data-parent="#faq" href="#answerThree" aria-expanded="false" aria-controls="answerThree">
+                  <h3>Required Parameters</h3>
+                </a>
+              </h5>
+            </div>
+            <div id="answerThree" class="collapse" role="tabcard" aria-labelledby="questionThree">
+              <div class="card-block">
+                <p>Required Parameters information has to go here.</p>
+              </div>
+            </div>
+
+          <div class="card-content" role="tab" id="questionFour">
+            <h5 class="card-title">
+              <a class="collapsed" data-toggle="collapse" data-parent="#faq" href="#answerFour" aria-expanded="false" aria-controls="answerFour">
+                <h3>Optional Parameters</h3>
+              </a>
+            </h5>
+          </div>
+          <div id="answerFour" class="collapse " role="tabcard" aria-labelledby="questionFour">
+            <div class="card-block">
+              <p>Optional Parameters information has to go here.</p>
+            </div>
+          </div>
+        </div>
+      </div>
+    </div>
+  </div>
 </div>
+</div>
+
+
+
 
 <!--IF WANT TO ADD IMAGE AFTER IN DESCRIPTION  -->
 <!-- <div class="card-image">
