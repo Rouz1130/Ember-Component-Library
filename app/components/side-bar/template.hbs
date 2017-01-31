@@ -1,99 +1,10 @@
-<!-- <div class="nav nav-sidebar">
-  <div class="panel-group" id="accordion">
-    <div class="panel panel-default">
-      <div class="panel-heading">
-        <h4 class="panel-title">
-          <li><a class="active"data-toggle="collapse" data-parent="#accordion" href="#collapse1">
-            <b>Modals</b>
-            <span class="sr-only">(current)</span></a></li>
-          </h4>
-        </div>
-
-        <div id="collapse1" class="panel-collapse collapse ">
-          <ul class="list-group">
-            <li class="list-group-item">{{link-to "form-window" 'product-card-doc' class='a'}}</li>
-            <li class="list-group-item">{{link-to "crud-modal" 'product-card-doc' class='a'}}</li>
-            <li class="list-group-item">{{link-to "notification-modal" 'product-card-doc' class='a'}}</li>
-          </ul>
-        </div>
-      </div>
-
-      <div class="panel panel-default">
-        <div class="panel-heading">
-          <h4 class="panel-title">
-            <li><a data-toggle="collapse" data-parent="#accordion" href="#collapse2">
-              <b>Form Elements</b><span class="sr-only">(current)</span></a></li>
-            </h4>
-          </div>
-          <div id="collapse2" class="panel-collapse collapse ">
-            <ul class="list-group">
-              <li class="list-group-item">{{link-to "validated-input" 'product-card-doc' class='a'}}</li>
-              <li class="list-group-item">{{link-to "form-input" 'product-card-doc' class='a'}}</li>
-            </ul>
-          </div>
-
-          <div class="panel panel-default">
-            <div class="panel-heading">
-              <h4 class="panel-title">
-                <li><a data-toggle="collapse" data-parent="#accordion" href="#collapse3">
-                  <b>Notifications, Progress Updates and Alerts</b><span class="sr-only">(current)</span></a></li>
-                </h4>
-              </div>
-              <div id="collapse3" class="panel-collapse collapse ">
-                <ul class="list-group">
-                  <li class="list-group-item">{{link-to "system-alert" 'product-card-doc' class='a'}}</li>
-                  <li class="list-group-item">{{link-to "loading-feedback" 'product-card-doc' class='a'}}</li>
-                </ul>
-              </div>
-
-              <div class="panel panel-default">
-                <div class="panel-heading">
-                  <h4 class="panel-title">
-                    <li><a data-toggle="collapse" data-parent="#accordion" href="#collapse4">
-                      <b>Pagination</b><span class="sr-only">(current)</span></a></li>
-                    </h4>
-                  </div>
-                  <div id="collapse4" class="panel-collapse collapse">
-                    <ul class="list-group">
-                      <li class="list-group-item">{{link-to "pagination-bar" 'product-card-doc' class='a'}}</li>
-                    </ul>
-                  </div>
-
-                  <div class="panel panel-default">
-                    <div class="panel-heading">
-                      <h4 class="panel-title">
-                        <li><a data-toggle="collapse" data-parent="#accordion" href="#collapse5">
-                          <b>Misc</b><span class="sr-only">(current)</span></a></li>
-                        </h4>
-                      </div>
-                      <div id="collapse5" class="panel-collapse collapse">
-                        <ul class="list-group">
-                          <li class="list-group-item">{{link-to "Product-Card" 'product-card-doc' class='a'}}</li>
-                        </ul>
-                      </div>
-                    </div>
-                  </div>
-                </div>
-              </div>
-            </div>
-          </div>
- -->
-
-
 
  <div class="nav-side-menu">
    <div class="brand">Brand Logo</div>
    <i class="fa fa-bars fa-2x toggle-btn" data-toggle="collapse" data-target="#menu-content"></i>
-
    <div class="menu-list">
-
      <ul id="menu-content" class="menu-content collapse out">
-       <li>
-         <a href="#">
-           <i class="fa fa-dashboard fa-lg"></i> Components
-         </a>
-       </li>
-
+        <h2 align="center">Components</h2>
        <li  data-toggle="collapse" data-target="#formModal" class="collapsed active">
          <a><i class="glyphicon glyphicon-modal-window fa-lg"></i> Modals<span class="arrow"></span></a>
        </li>
@@ -102,7 +13,6 @@
          <li><a>{{link-to "Crud-Modal" 'product-card-doc' class="a"}}</a></li>
          <li><a>{{link-to "Notification-Modal" 'product-card-doc' class='a'}}</a></li>
        </ul>
-
 
        <li data-toggle="collapse" data-target="#formElements" class="collapsed">
          <a><i class="glyphicon glyphicon-inbox fa-lg"></i> Form Elements <span class="arrow"></span></a>
@@ -113,29 +23,27 @@
        </ul>
 
        <li data-toggle="collapse" data-target="#npua" class="collapsed">
-         <a><i class="	glyphicon glyphicon-alert fa-lg"></i>Notifications/Progress/Updates/Alerts<span class="arrow"></span></a>
+         <a><i class="	glyphicon glyphicon-alert fa-lg"></i> Notifications/Progress/Updates/Alerts<span class="arrow"></span></a>
        </li>
        <ul class="sub-menu collapse" id="npua">
          <li><a>{{link-to "system-alert" 'product-card-doc' class='a'}}</a></li>
          <li><a>{{link-to "loading-feedback" 'product-card-doc' class='a'}}</a></li>
        </ul>
 
-
        <li data-toggle="collapse" data-target="#pagination" class="collapsed">
-         <a><i class="glyphicon glyphicon-menu-left"></i>
-        <span class="glyphicon glyphicon-menu-right"></span> Pagination <span class="arrow"></span></a>
-       </li>
-       <ul class="sub-menu collapse" id="pagination">
-         <li><a>{{link-to "pagination-bar" 'product-card-doc' class='a'}}</a></li>
-       </ul>
+         <a><i class=	"glyphicon glyphicon-sort fa-lg"></i>
+           Pagination <span class="arrow"></span></a>
+         </li>
+         <ul class="sub-menu collapse" id="pagination">
+           <li><a>{{link-to "pagination-bar" 'product-card-doc' class='a'}}</a></li>
+         </ul>
 
-
-       <li data-toggle="collapse" data-target="#misc" class="collapsed">
-         <a><i class="fa fa-users fa-lg"></i>Misc <span class="arrow"></span></a>
-       </li>
-       <ul class="sub-menu collapse" id="misc">
-         <li><a>{{link-to "Miscellaneous" 'product-card-doc' class='a'}}</a></li>
+         <li data-toggle="collapse" data-target="#misc" class="collapsed">
+           <a><i class="glyphicon glyphicon-asterisk fa-lg"></i> Misc <span class="arrow"></span></a>
+         </li>
+         <ul class="sub-menu collapse" id="misc">
+           <li><a>{{link-to "Miscellaneous" 'product-card-doc' class='a'}}</a></li>
+         </ul>
        </ul>
-     </ul>
+     </div>
    </div>
- </div>
