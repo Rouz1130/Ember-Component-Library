@@ -105,6 +105,12 @@ $no-image-font-size: $image-width;
 .card .card-content p {
   margin: 0;
   color: inherit;
+  text-align: justify;
+}
+.card .card-content h3 {
+  margin: 0;
+  color: inherit;
+  text-align:justify;
 }
 .card .card-content span.card-title {
   line-height: 48px;
