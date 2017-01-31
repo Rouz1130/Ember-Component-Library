@@ -4,16 +4,16 @@
 @import url(https://fonts.googleapis.com/css?family=Lobster);
 @import url(https://fonts.googleapis.com/css?family=Passion+One);
 
-$product-card-height: 70px;
+$product-card-height: 102px;
 $card-element-margin: 5px;
 $card-element-height: $product-card-height - (2 * $card-element-margin);
-$image-width: $card-element-height;
+$image-width: 110px;
 $no-image-font-size: $image-width;
 
 .product-card {
     width: 48%;
     height: $product-card-height;
-    display: inline-block;
+    display:inline-block;
     margin: 5px;
     border: 1px solid #CCC;
     box-shadow: 0 0 3px #ccc;
@@ -28,6 +28,11 @@ $no-image-font-size: $image-width;
 
 .product-card__image-container, .product-card__product-info-container {
     height: $card-element-height;
+    font-size: 23px;
+    text-align: left;
+    font-family:serif;
+    font-style: normal;
+    font-weight: 300;
 }
 
 .product-card__image-container {
@@ -49,24 +54,6 @@ $no-image-font-size: $image-width;
     float: right;
 }
 
-.cp-Panel {
-  border: 1px solid #ddd;
-}
-.cp-Panel-toggle {
-  display: block;
-  padding: 1em;
-}
-.cp-Panel-toggle:link {
-  text-decoration: none;
-}
-.cp-Panel-toggle:hover {
-  background-color: whitesmoke;
-}
-.cp-Panel-body-inner {
-  padding: 1em;
-}
-
-
 .product-card__image-container > img {
     margin: auto;
     display: block;
@@ -75,6 +62,8 @@ $no-image-font-size: $image-width;
     max-height: calc(#{$image-width});
     max-width: $image-width;
 }
+
+// start of component-documentation box/card
 
 .card {
   box-shadow: 0 2px 5px 0 rgba(0, 0, 0, 0.16), 0 2px 10px 0 rgba(0, 0, 0, 0.12);
@@ -88,15 +77,17 @@ $no-image-font-size: $image-width;
   background-clip: padding-box;
 }
 
-.card span.card-title {
+.card h5.card-title {
     color: #2a2a2a;
     font-size: 24px;
     font-family: inherit;
     font-weight: 300;
     text-transform: uppercase;
+    text-align: left;
 
 }
 
+//If we decide to add image in component-documentation box code commented out below.
 
 // .card .card-image {
 //   position: relative;
@@ -185,73 +176,229 @@ body {
   border: 0;
 }
 
+
+.nav-side-menu {
+  overflow: auto;
+  font-family: verdana;
+  font-size: 12px;
+  font-weight: 200;
+  background-color: #2e353d;
+  position: fixed;
+  top: 0px;
+  width: 300px;
+  height: 100%;
+  color: #e1ffff;
+}
+.nav-side-menu .brand {
+  background-color: #23282e;
+  line-height: 50px;
+  display: block;
+  text-align: center;
+  font-size: 14px;
+}
+.nav-side-menu .toggle-btn {
+  display: none;
+}
+.nav-side-menu ul,
+.nav-side-menu li {
+  list-style: none;
+  padding: 0px;
+  margin: 0px;
+  line-height: 35px;
+  cursor: pointer;
+  /*
+    .collapsed{
+       .arrow:before{
+                 font-family: FontAwesome;
+                 content: "\f053";
+                 display: inline-block;
+                 padding-left:10px;
+                 padding-right: 10px;
+                 vertical-align: middle;
+                 float:right;
+            }
+     }
+*/
+}
+.nav-side-menu ul :not(collapsed) .arrow:before,
+.nav-side-menu li :not(collapsed) .arrow:before {
+  font-family: FontAwesome;
+  content: "\f078";
+  display: inline-block;
+  padding-left: 10px;
+  padding-right: 10px;
+  vertical-align: middle;
+  float: right;
+}
+.nav-side-menu ul .active,
+.nav-side-menu li .active {
+  border-left: 3px solid #d19b3d;
+  background-color: #4f5b69;
+}
+.nav-side-menu ul .sub-menu li.active,
+.nav-side-menu li .sub-menu li.active {
+  color: #d19b3d;
+}
+.nav-side-menu ul .sub-menu li.active a,
+.nav-side-menu li .sub-menu li.active a {
+  color: #d19b3d;
+}
+.nav-side-menu ul .sub-menu li,
+.nav-side-menu li .sub-menu li {
+  background-color: #181c20;
+  border: none;
+  line-height: 28px;
+  border-bottom: 1px solid #23282e;
+  margin-left: 0px;
+}
+.nav-side-menu ul .sub-menu li:hover,
+.nav-side-menu li .sub-menu li:hover {
+  background-color: #020203;
+}
+.nav-side-menu ul .sub-menu li:before,
+.nav-side-menu li .sub-menu li:before {
+  font-family: FontAwesome;
+  content: "\f105";
+  display: inline-block;
+  padding-left: 10px;
+  padding-right: 10px;
+  vertical-align: middle;
+}
+.nav-side-menu li {
+  padding-left: 0px;
+  border-left: 3px solid #2e353d;
+  border-bottom: 1px solid #23282e;
+}
+.nav-side-menu li a {
+  text-decoration: none;
+  color: #e1ffff;
+}
+.nav-side-menu li a i {
+  padding-left: 10px;
+  width: 20px;
+  padding-right: 20px;
+}
+.nav-side-menu li:hover {
+  border-left: 3px solid #d19b3d;
+  background-color: #4f5b69;
+  -webkit-transition: all 1s ease;
+  -moz-transition: all 1s ease;
+  -o-transition: all 1s ease;
+  -ms-transition: all 1s ease;
+  transition: all 1s ease;
+}
+@media (max-width: 767px) {
+  .nav-side-menu {
+    position: relative;
+    width: 100%;
+    margin-bottom: 10px;
+  }
+  .nav-side-menu .toggle-btn {
+    display: block;
+    cursor: pointer;
+    position: absolute;
+    right: 10px;
+    top: 10px;
+    z-index: 10 !important;
+    padding: 3px;
+    background-color: #ffffff;
+    color: #000;
+    width: 40px;
+    text-align: center;
+  }
+  .brand {
+    text-align: left !important;
+    font-size: 22px;
+    padding-left: 20px;
+    line-height: 50px !important;
+  }
+}
+@media (min-width: 767px) {
+  .nav-side-menu .menu-list .menu-content {
+    display: block;
+  }
+}
+body {
+  margin: 0px;
+  padding: 0px;
+}
+
+.glyphicon.glyphicon-menu-left {
+    font-size: 11px;
+}
+
+.glyphicon.glyphicon-menu-right {
+    font-size: 11px;
+}
+
+
 /*
  * Sidebar
  */
 
 /* Hide for mobile, show later */
-.sidebar {
-  display: none;
-}
-@media (min-width: 768px) {
-  .sidebar {
-    position: fixed;
-    top: 51px;
-    bottom: 0;
-    left: 0;
-    z-index: 1000;
-    display: block;
-    padding: 20px;
-    overflow-x: hidden;
-    overflow-y: auto; /* Scrollable contents if viewport is shorter than content. */
-    background-color: #f5f5f5;
-    border-right: 1px solid #eee;
-  }
-}
-
-/* Sidebar navigation */
-.nav-sidebar {
-  margin-right: -21px; /* 20px padding + 1px border */
-  margin-bottom: 20px;
-  margin-left: -20px;
-}
-.nav-sidebar {
-  > li {
-    > a {
-      padding-right: 20px;
-      padding-left: 20px;
-      font-family: sans-serif;
-      font-size: 20px;
-      font-weight: lighter;
-    }
-  }
-
-  > .active {
-    > a, > a:hover, > a:focus {
-      color: #fff;
-      background-color: #428bca;
-      font-size: 30px;
-      font-family: sans-serif;;
-      font-style: normal;
-      font-weight: 300;
-    }
-  }
-}
-
-hr.style13 {
-	height: 10px;
-	border: 0;
-  padding-top: 15px;
-	box-shadow: 0 10px 10px -10px #8c8b8b inset;
-}
-
-.container {
-  font-family:serif;
-  font-style: normal;
-  font-weight:300;
-  font-size: 22px;
-
-}
+// .sidebar {
+//   display: none;
+// }
+// @media (min-width: 768px) {
+//   .sidebar {
+//     position:inherit;
+//     top: 51px;
+//     bottom: 0;
+//     left: 0;
+//     z-index: 1000;
+//     display: block;
+//     padding: 20px;
+//     overflow-x: hidden;
+//     overflow-y: auto; /* Scrollable contents if viewport is shorter than content. */
+//     background-color: #f5f5f5;
+//     border-right: 1px solid #eee;
+//   }
+// }
+//
+// /* Sidebar navigation */
+// .nav-sidebar {
+//   margin-right: -21px; /* 20px padding + 1px border */
+//   margin-bottom: 20px;
+//   margin-left: -20px;
+// }
+// .nav-sidebar {
+//   > li {
+//     > a {
+//       padding-right: 20px;
+//       padding-left: 20px;
+//       font-family:serif;
+//       font-size: 20px;
+//       font-weight: bolder;
+//     }
+//   }
+//
+//   > .active {
+//     > a, > a:hover, > a:focus {
+//       color: #fff;
+//       background-color: #428bca;
+//       font-size: 30px;
+//       font-family: sans-serif;;
+//       font-style: normal;
+//       font-weight: 300;
+//     }
+//   }
+// }
+//
+// hr.style13 {
+// 	height: 10px;
+// 	border: 0;
+//   padding-top: 15px;
+// 	box-shadow: 0 10px 10px -10px #8c8b8b inset;
+// }
+//
+// .container {
+//   font-family:serif;
+//   font-style: normal;
+//   font-weight:300;
+//   font-size: 22px;
+//
+// }
 .nh2 {
 font-family: 'Lobster';
 font-size: 35px;
