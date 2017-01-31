@@ -1,7 +1,7 @@
 import Ember from 'ember';
 
 export default Ember.Component.extend({
-    classNames: ['product-documentation'],
+    classNames: ['component-documentation'],
     click() {
         this.get('click')();
     }
